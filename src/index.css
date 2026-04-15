@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700;900&family=Amiri:wght@400;700&display=swap');
+
+@theme {
+  --font-urbanist: "Urbanist", sans-serif;
+  --font-arabic: "Amiri", serif;
+  
+  --color-primary: #059669;
+  --color-primary-dark: #064e3b; 
+  --color-bg-light: #f1f5f9; 
+}
+
+@layer base {
+  body {
+    @apply bg-[color:--color-bg-light] text-slate-900 font-[family-name:--font-urbanist] antialiased;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/60 backdrop-blur-xl border border-white/20 shadow-lg shadow-slate-200/50;
+  }
+  .neo-btn {
+    @apply bg-white border border-slate-200 shadow-[2px_2px_5px_#d1d5db,-2px_-2px_5px_#ffffff] active:shadow-inner active:scale-95 transition-all;
+  }
+}
