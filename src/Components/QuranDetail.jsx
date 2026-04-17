@@ -8,9 +8,9 @@ export default function QuranDetail({ suratId }) {
     if (!suratId) return;
     
     setLoading(true);
-    console.log("Fetching surat nomor:", suratId); // Cek di console browser
+    console.log("Fetching surat nomor:", suratId); 
 
-    fetch(`https://equran.id/api/v2/surat/${suratId}`)
+    fetch('https://equran.id/api/v2/surat/{id}')
       .then(res => res.json())
       .then(json => {
         setDetail(json.data);
